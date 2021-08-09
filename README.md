@@ -19,6 +19,6 @@ npm run start
 # production
 npm run build
 ```
-The output locates at `dist` folder.
+The output is located in `dist` folder.
 
 ## Good luck, have fun 😄
