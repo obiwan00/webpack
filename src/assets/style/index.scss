@@ -1,7 +1,15 @@
 @import './variables.scss';
-@import './typography.scss';
 @import './reset.css';
+@import './fonts.scss';
+@import './typography.scss';
 
 body {
   background-color: $backgroundColor;
+}
+
+.js-icon {
+  width: 200px;
+  height: 200px;
+  background: yellow url('/src/assets/images/javascript.svg') no-repeat;
+  background-size: contain;
 }
