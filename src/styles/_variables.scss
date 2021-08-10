@@ -1,0 +1,28 @@
+// Container Parameters
+$containerPadding: 40px;
+$containerPaddingS: 20px;
+$designContainer: 1200; // container width
+$containerMaxWidth: $designContainer + remToNum($containerPadding) * 2;
+
+// Adaptive Property Sizing
+$adaptivePropertyMaxViewport: $containerMaxWidth;
+$adaptivePropertyMinViewport: 375;
+
+// Breakpoints sizing
+$desktop: 1440px;
+$desktopP1: $desktop / 1px + 1px;
+$tablet: 1024px; // @media (max-width: $tablet) --> 1024px and smaller
+$tabletP1: $tablet / 1px + 1px; // @media (min-width: $tabletP1) --> 1025px and bigger
+$tabletSmall: 767px;
+$tabletSmallP1: $tabletSmall / 1px + 1px;
+$mobile: 575px;
+$mobileP1: $mobile / 1px + 1px;
+
+// Colors
+$black: #000000;
+
+// Theme colors
+$backgroundColor: #f7f4d7;
+
+// Font family
+$primaryFont: 'Roboto', 'serif';
