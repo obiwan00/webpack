@@ -2,11 +2,11 @@
   $addSize: $deskSize - $mobSize;
   $addMobSize: $addSize + $addSize * 0.7;
   @media (max-width: numToPx($adaptivePropertyMinViewport)) {
-    #{$propertyName}: numToRem($mobSize);
+    #{$propertyName}: numToPx($mobSize);
   }
   @media (min-width: numToPx($adaptivePropertyMinViewport + 1)) and (max-width: numToPx($containerMaxWidth)) {
     #{$propertyName}: calc(
-      #{numToRem($mobSize)} + #{$addSize} *
+      #{numToPx($mobSize)} + #{$addSize} *
         (
           (100vw - #{numToPx($adaptivePropertyMinViewport)}) /
             (#{$adaptivePropertyMaxViewport} - #{$adaptivePropertyMinViewport})
@@ -14,6 +14,6 @@
     );
   }
   @media (min-width: numToPx($adaptivePropertyMaxViewport + 1)) {
-    #{$propertyName}: numToRem($deskSize);
+    #{$propertyName}: numToPx($deskSize);
   }
 }

@@ -1,0 +1,61 @@
+@import '/src/styles/_functions.scss';
+@import '/src/styles/_variables.scss';
+@import '/src/styles/_mixins.scss';
+@import '/src/styles/_typography.scss';
+
+.nav {
+  @media (max-width: $tablet) {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 20px $containerPaddingS 40px;
+    box-sizing: border-box;
+
+    background: $moon-light;
+  }
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    padding: 20px $containerPaddingS 40px 40px;
+  }
+
+  ul {
+    @media (min-width: $tabletP1) {
+      display: flex;
+      font-size: 20px;
+    }
+  }
+
+  li {
+    line-height: 1.8;
+    font-weight: 700;
+    @media (max-width: $tablet) {
+      font-size: 40px;
+    }
+    &:not(:last-child) {
+      @media (max-width: $tablet) {
+        margin-bottom: 40px;
+      }
+      @media (min-width: $tabletP1) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  // .nav__close-btn
+
+  &__close-btn {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 40px;
+    padding: 16px;
+
+    @media (min-width: $tabletP1) {
+      display: none;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

@@ -1,9 +1,12 @@
-header.header
-  .header__container.container
-    a(href="./" class="header__logo") 
-      img(src=require("/src/assets/images/shiba.svg"), alt="")
-    nav 
-      ul
-        each link in [{href: './index.html', value: 'Home'}, {href: './about-us.html', value: 'Test2'}] 
-          li
-            a(href=link.href)= link.value
+header(class="header" id="header")
+  div(class="header__fader  js-toggle-menu")
+  div(class="header__container container")
+    a(href="./" class="header__logo")
+      img(src=require("/src/assets/images/shiba.svg"), alt="logo dog") 
+      | Doggies
+    button(type="button" class="header__burger js-toggle-menu")
+      img(src=require("/src/assets/images/menu.svg"), alt="menu") 
+
+    div(class="header__nav")
+      include ./nav/nav
+

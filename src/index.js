@@ -1,3 +1,9 @@
 import './styles/index.scss'
 
-console.log('Hello world')
+import {initHeader} from './components'
+
+document.addEventListener('DOMContentLoaded', runAfterDomLoad)
+function runAfterDomLoad() {
+  initHeader()
+  console.log('Hello world')
+}

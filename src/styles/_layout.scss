@@ -10,3 +10,18 @@
     padding-left: $containerPadding;
   }
 }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  background: rgba($moon-light, 0.3);
+}

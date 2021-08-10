@@ -1,0 +1,7 @@
+nav(class="nav")
+  button(class="nav__close-btn js-toggle-menu") 
+    img(src=require("/src/assets/images/close.svg"), alt="close")
+  ul
+    each link in [{href: './index.html', value: 'Home'}, {href: './about-us.html', value: 'About Us'}] 
+      li
+        a(href=link.href)= link.value
