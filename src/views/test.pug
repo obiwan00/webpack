@@ -7,5 +7,10 @@ html(lang="en")
         title Document
     body 
         h1 Test pug page
+        nav
+          ul  
+            each link in [{href: './index.html', value: 'Index'}, {href: './test2.html', value: 'Test2'}] 
+              li
+                a(href=link.href)= link.value
         div(class="js-icon")
         p hello world 
