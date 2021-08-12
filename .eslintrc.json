@@ -1,28 +1,40 @@
 {
-    "extends": [
-      "eslint:recommended",
-      "google"
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "prettier"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "ignorePatterns": [
+    "webpack-config",
+    "dist"
+  ],
+  "rules": {
+    "semi": "off",
+    "comma-dangle": "off",
+    "max-len": [
+      "warn",
+      120
     ],
-    "env": {
-      "es6": true,
-      "browser": true,
-      "node": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
-    },
-    "ignorePatterns": ["webpack-config", "dist"],
-    "rules": {
-      "semi": "off",
-      "comma-dangle": "off",
-      "max-len": ["warn", 120],
-      "require-jsdoc": "off",
-      "space-before-function-paren": "off",
-      "arrow-parens": "off",
-      "no-magic-numbers": ["warn", {
-        "ignore": [0,1]
-      }]
-    }
+    "require-jsdoc": "off",
+    "space-before-function-paren": "off",
+    "arrow-parens": "off",
+    "no-magic-numbers": [
+      "warn",
+      {
+        "ignore": [
+          0,
+          1
+        ]
+      }
+    ]
   }
-  
+}

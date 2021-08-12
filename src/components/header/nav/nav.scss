@@ -1,8 +1,3 @@
-@import '/src/styles/_functions.scss';
-@import '/src/styles/_variables.scss';
-@import '/src/styles/_mixins.scss';
-@import '/src/styles/_typography.scss';
-
 .nav {
   @media (max-width: $tablet) {
     width: 100%;
@@ -13,7 +8,7 @@
     padding: 20px $containerPaddingS 40px;
     box-sizing: border-box;
 
-    background: $moon-light;
+    background: $moonLight;
   }
   @media (min-width: $mobile) and (max-width: $tablet) {
     padding: 20px $containerPaddingS 40px 40px;
@@ -29,9 +24,8 @@
   li {
     line-height: 1.8;
     font-weight: 700;
-    @media (max-width: $tablet) {
-      font-size: 40px;
-    }
+    font-size: 32px;
+
     &:not(:last-child) {
       @media (max-width: $tablet) {
         margin-bottom: 40px;

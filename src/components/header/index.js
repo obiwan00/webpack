@@ -1,6 +1,3 @@
-import './header.scss'
-import './nav/nav.scss'
-
 export function initHeader() {
   const header = document.getElementById('header')
   if (!header) return
@@ -8,7 +5,6 @@ export function initHeader() {
   const menuToggles = document.querySelectorAll('.js-toggle-menu')
 
   menuToggles.forEach((el) => {
-    console.log({el})
     el.addEventListener('click', toggleMenu)
   })
 

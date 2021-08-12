@@ -5,3 +5,13 @@
 @import '_fonts.scss';
 @import '_typography.scss';
 @import '_layout.scss';
+
+@import 'base/border.scss';
+@import 'base/btn.scss';
+
+@import '../components/header/header.scss';
+@import '../components/header/nav/nav.scss';
+@import '../components/footer/footer.scss';
+@import '../components/loader/loader.scss';
+@import '../components/js-templates/items-grid/items-grid.scss';
+@import '../components/js-templates/card/card.scss';

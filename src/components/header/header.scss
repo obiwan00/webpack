@@ -1,12 +1,7 @@
-@import '/src/styles/_functions.scss';
-@import '/src/styles/_variables.scss';
-@import '/src/styles/_mixins.scss';
-@import '/src/styles/_typography.scss';
-
 .header {
   position: relative;
 
-  background: $moon-light;
+  background: $moonLight;
   padding: 20px 0;
 
   // .header--active
