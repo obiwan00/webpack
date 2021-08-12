@@ -1,0 +1,27 @@
+.container {
+  max-width: #{$containerMaxWidth + px};
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-right: $containerPaddingS;
+  padding-left: $containerPaddingS;
+  @media (min-width: $tabletP1) {
+    padding-right: $containerPadding;
+    padding-left: $containerPadding;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  background: rgba($moonLight, 0.3);
+}

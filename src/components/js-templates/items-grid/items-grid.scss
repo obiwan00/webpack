@@ -1,0 +1,25 @@
+.items-grid {
+  padding: 40px 0;
+
+  // .items-grid__container
+
+  &__container {
+  }
+
+  // .items-grid__head
+  &__head {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  // .items-grid__body
+  &__body {
+    display: grid;
+    gap: 24px;
+    @media (min-width: $mobileP1) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $tabletP1) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

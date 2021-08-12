@@ -7,10 +7,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'source-map',
+  target: 'web',
   devServer: {
-    contentBase: path.join(__dirname, '../src/assets'),
     compress: true,
     port: 9000,
+    static: true,
   },
   module: {
     rules: [

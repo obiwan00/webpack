@@ -1,5 +1,17 @@
-import './assets/style/index.scss'
-import {sum} from './assets/js/index'
+import './styles/index.scss'
 
-console.log('Hello world')
-console.log('1 + 1 + 1 = ', sum(1, 1, 1))
+import {initHeader, initBreadsFetch} from './components'
+import {LoaderService} from './services/loader.service'
+
+document.addEventListener('DOMContentLoaded', runAfterDomLoad)
+function runAfterDomLoad() {
+  initHeader()
+  if (
+    window.location.pathname === '/index.html' ||
+    window.location.pathname === '/'
+  ) {
+    const loader = new LoaderService()
+    loader.switchOn()
+    initBreadsFetch()
+  }
+}

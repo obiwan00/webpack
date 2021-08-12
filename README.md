@@ -12,7 +12,7 @@ npm install
 #2. Run building for:
 
 # development
-npm run start
+npm run dev # dev server hosts at http://localhost:9000/
 
 # OR
 

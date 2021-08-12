@@ -1,0 +1,19 @@
+@mixin adaptiveProperty($propertyName, $deskSize, $mobSize) {
+  $addSize: $deskSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+  @media (max-width: numToPx($adaptivePropertyMinViewport)) {
+    #{$propertyName}: numToPx($mobSize);
+  }
+  @media (min-width: numToPx($adaptivePropertyMinViewport + 1)) and (max-width: numToPx($containerMaxWidth)) {
+    #{$propertyName}: calc(
+      #{numToPx($mobSize)} + #{$addSize} *
+        (
+          (100vw - #{numToPx($adaptivePropertyMinViewport)}) /
+            (#{$adaptivePropertyMaxViewport} - #{$adaptivePropertyMinViewport})
+        )
+    );
+  }
+  @media (min-width: numToPx($adaptivePropertyMaxViewport + 1)) {
+    #{$propertyName}: numToPx($deskSize);
+  }
+}

@@ -1,0 +1,56 @@
+.about-us {
+  padding: 40px 0;
+  // .about-us__container
+
+  &__container {
+  }
+
+  // .about-us__title
+
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  // .about-us__body
+
+  &__body {
+    @media (min-width: $tabletP1) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  // .about-us__content
+
+  &__content {
+    @media (min-width: $tabletP1) {
+      margin-right: 40px;
+      width: 44%;
+    }
+    p {
+      margin-top: 12px;
+    }
+  }
+
+  // .about-us__map
+
+  &__map {
+    position: relative;
+    @media (max-width: $tablet) {
+      min-height: 300px;
+      margin-top: 30px;
+    }
+    @media (min-width: $tabletP1) {
+      width: 52%;
+      min-height: 400px;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
