@@ -7,7 +7,7 @@
  */
 
 export function getItemsGrid({title, bodyContent}) {
-  const itemsGrid = document.createElement('div')
+  const itemsGrid = document.createElement('section')
   itemsGrid.classList.add('items-grid')
   itemsGrid.innerHTML = `
     <div class="items-grid__container container">
