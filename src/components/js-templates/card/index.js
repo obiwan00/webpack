@@ -1,3 +1,5 @@
+import {limitString} from '../../../utils/utils'
+
 /**
  * Create card html
  * @param {object} params
@@ -23,16 +25,4 @@ export function createCard({imgUrl, title, description, link}) {
       }" class="btn card__btn" href="${link.url}">${link.title}</a>
   `.trim()
   return card
-}
-
-function limitString(
-  str,
-  {maxLen, endingStr} = {maxLen: 80, endingStr: '...'}
-) {
-  if (str.length > maxLen) {
-    const replacerRegExp = new RegExp(`^(.{${maxLen}}\\S*)(.*)`, 'gi')
-    const trimmedString = str.replace(replacerRegExp, '$1')
-    return `${trimmedString} ${endingStr}`
-  }
-  return str
 }
