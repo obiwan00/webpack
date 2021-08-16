@@ -34,7 +34,8 @@
   // .card__description
 
   &__description {
-    margin-top: 8px;
+    margin-top: 4px;
+    @extend .p;
   }
 
   // .card__btn
