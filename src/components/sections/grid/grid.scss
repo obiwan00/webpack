@@ -1,0 +1,40 @@
+.grid-section {
+  padding: 40px 0;
+  // .grid-section__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  // .grid-section__item
+
+  &__item {
+    border-radius: 12px;
+    overflow: hidden;
+    grid-column: span 12;
+
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    // .grid-section__item--col-6
+
+    &--col-6 {
+      @media (min-width: $tabletP1) {
+        grid-column: span 6;
+      }
+    }
+
+    // .grid-section__item--col-4
+
+    &--col-4 {
+      @media (min-width: $tabletP1) {
+        grid-column: span 4;
+      }
+    }
+  }
+}

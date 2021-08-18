@@ -1,0 +1,59 @@
+.media-card {
+  background: $moonLight;
+
+  @media (min-width: $tabletP1) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .media-card__img
+
+  &__img {
+    width: 100%;
+
+    @media (max-width: $tablet) {
+      @include aspect-ratio-img;
+
+      @media (min-width: $mobileP1) {
+        --aspect-ratio: 62%;
+      }
+    }
+
+    @media (min-width: $tabletP1) {
+      flex-basis: 70%;
+    }
+  }
+
+  // .media-card__text
+
+  &__text {
+    padding: 20px 20px 28px;
+    box-sizing: border-box;
+
+    @media (min-width: $tabletP1) {
+      flex-basis: 30%;
+    }
+
+    p {
+      @extend .p2;
+      margin-top: 4px;
+
+      @media (min-width: $tabletP1) {
+        margin-top: 20px;
+      }
+    }
+
+    time {
+      display: inline-block;
+      margin-top: 8px;
+      background: $black;
+      color: $white;
+      padding: 2px 4px;
+      border-radius: 2px;
+      box-sizing: border-box;
+      @media (min-width: $tabletP1) {
+        margin-top: 32px;
+      }
+    }
+  }
+}
