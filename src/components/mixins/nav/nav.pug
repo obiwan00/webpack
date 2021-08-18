@@ -1,0 +1,8 @@
+mixin nav({navLinks})
+  nav(class="nav")
+    button(class="nav__close-btn js-toggle-menu") 
+      img(src=require("/src/assets/images/close.svg"), alt="close")
+    ul
+      each link in navLinks
+        li
+          a(href=link.href)= link.value

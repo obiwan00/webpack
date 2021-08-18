@@ -9,8 +9,9 @@
 @import 'base/border.scss';
 @import 'base/btn.scss';
 
+@import '../components/mixins/nav/nav.scss';
+
 @import '../components/header/header.scss';
-@import '../components/header/nav/nav.scss';
 @import '../components/footer/footer.scss';
 @import '../components/loader/loader.scss';
 @import '../components/about-us/about-us.scss';
