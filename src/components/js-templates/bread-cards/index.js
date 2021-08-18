@@ -1,11 +1,9 @@
-import {LoaderService} from '../../../services/loader.service'
 import {FetchPetService} from '../../../services/fetch-pet.service'
 import {createCard} from '../card'
 import {getItemsGrid} from '../items-grid'
 
 export async function initBreadsFetch() {
   const appContentEl = document.getElementById('app-content')
-  const loader = new LoaderService()
   const fetchPetService = new FetchPetService()
 
   const pets = await fetchPetService.getBreads({limit: 20})
@@ -26,6 +24,4 @@ export async function initBreadsFetch() {
     bodyContent: petsCards.join(''),
   })
   appContentEl.append(petsWrapper)
-
-  loader.switchOff()
 }

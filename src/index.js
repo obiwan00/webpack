@@ -1,17 +1,15 @@
 import './styles/index.scss'
 
-import {initHeader, initBreadsFetch} from './components'
-import {LoaderService} from './services/loader.service'
+import {initHeader, initHome} from './components'
 
 document.addEventListener('DOMContentLoaded', runAfterDomLoad)
-function runAfterDomLoad() {
+async function runAfterDomLoad() {
   initHeader()
+
   if (
     window.location.pathname === '/index.html' ||
     window.location.pathname === '/'
   ) {
-    const loader = new LoaderService()
-    loader.switchOn()
-    initBreadsFetch()
+    initHome()
   }
 }
