@@ -1,0 +1,33 @@
+include ../../mixins/media-card/media-card
+
+section.grid-section
+  .container.grid-section__container
+    - var grid_items = [
+    -   {url: require('/src/assets/images/grid-section/1.jpeg'), col: 6},
+    -   {url: require('/src/assets/images/grid-section/2.jpeg'), col: 6},
+    -   {url: require('/src/assets/images/grid-section/3.jpeg'), col: 4}, 
+    -   {url: require('/src/assets/images/grid-section/4.jpeg'), col: 4},
+    -   {url: require('/src/assets/images/grid-section/5.jpeg'), col: 4}
+    - ]
+    each item in grid_items
+      div(class=`grid-section__item grid-section__item--col-${item.col} aspect-ratio-img`)
+        img(src=item.url, alt="img")
+
+    +media-card({
+      parentClass: 'grid-section__item',
+      imgUrl: require('/src/assets/images/grid-section/11.jpeg'),
+      title: 'Lorem ipsum dolor sit amet.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellendus iste unde est aspernatur corrupti impedit, ullam inventore earum sunt.',
+      time: '03:00'
+    })
+
+    - var grid_items = [
+    -   {url: require('/src/assets/images/grid-section/6.jpeg'), col: 4},
+    -   {url: require('/src/assets/images/grid-section/7.jpeg'), col: 4},
+    -   {url: require('/src/assets/images/grid-section/8.jpeg'), col: 4}, 
+    -   {url: require('/src/assets/images/grid-section/9.jpeg'), col: 6},
+    -   {url: require('/src/assets/images/grid-section/10.jpeg'), col: 6}
+    - ]
+    each item in grid_items
+      div(class=`grid-section__item grid-section__item--col-${item.col} aspect-ratio-img`)
+        img(src=item.url, alt="img")

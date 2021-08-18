@@ -1,0 +1,9 @@
+mixin media-card({parentClass = '', imgUrl, title, description, time})
+  article(class=`media-card ${parentClass}`)
+    .media-card__img 
+      img(src=imgUrl, alt="img")
+    .media-card__text 
+      h2 #{title}
+      p #{description}
+      time(datetime=time) #{time}
+

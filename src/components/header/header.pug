@@ -1,3 +1,5 @@
+include ../mixins/nav/nav
+
 header(class="header" id="header")
   div(class="header__fader  js-toggle-menu")
   div(class="header__container container")
@@ -8,5 +10,11 @@ header(class="header" id="header")
       img(src=require("/src/assets/images/menu.svg"), alt="menu") 
 
     div(class="header__nav")
-      include ./nav/nav
+      - var navLinks = [
+      -   {href: './index.html', value: 'Home'},
+      -   {href: './about-us.html', value: 'About Us'},
+      -   {href: './grid.html', value: 'Grid'},
+      -   {href: './flex.html', value: 'Flexbox'}
+      - ] 
+      +nav({navLinks: navLinks})
 

@@ -1,0 +1,8 @@
+mixin post({parentClass = '', imgUrl, title, description, link})
+  article(class=`post ${parentClass}`)
+    .post__img
+      img(src=imgUrl, alt="img")
+    .post__text 
+      h4 #{title}
+      p #{description}
+      a(href=link.url class='btn') #{link.title} 

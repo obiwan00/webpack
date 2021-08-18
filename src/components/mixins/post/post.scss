@@ -1,0 +1,35 @@
+.post {
+  @extend .border;
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $moonLight;
+
+  display: flex;
+  flex-direction: column;
+
+  // .post__img
+
+  &__img {
+    @include aspect-ratio-img(62%);
+  }
+
+  // .post__text
+
+  &__text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .btn {
+      margin-top: auto;
+    }
+  }
+}
