@@ -24,7 +24,7 @@ const viewPagesWrappedWithHtmlPlugins = generateHtmlWebpackPlugins({
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: './src/index.ts',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -40,6 +40,11 @@ module.exports = {
         use: ['pug-loader'],
       },
       {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
@@ -48,6 +53,9 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '...'],
   },
   output: {
     path: path.resolve(rootDirPath, 'dist'),

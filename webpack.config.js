@@ -8,4 +8,4 @@ module.exports = (env, argv) => {
   if (buildMode === 'production') {
     return require('./webpack-config/webpack.config.prod.js')
   }
-};
+}
