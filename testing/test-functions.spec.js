@@ -11,9 +11,9 @@ describe('Test custom functions implementation', () => {
   })
   it('pow', () => {
     expect(pow(2, -1)).toBeCloseTo(0.5)
-    expect(pow(2,4)).toBe(16)
-    expect(pow(5,3)).toBe(125)
-    expect(pow(-5,3)).toBe(-125)
-    expect(pow(-5,2)).toBe(25)
+    expect(pow(2, 4)).toBe(16)
+    expect(pow(5, 3)).toBe(125)
+    expect(pow(-5, 3)).toBe(-125)
+    expect(pow(-5, 2)).toBe(25)
   })
 })

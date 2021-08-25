@@ -1,6 +1,7 @@
 import './styles/index.scss'
 
-import {initHeader, initHome} from './components'
+import {initHeader} from './components'
+import {initHome} from './js/pages'
 
 document.addEventListener('DOMContentLoaded', runAfterDomLoad)
 async function runAfterDomLoad() {

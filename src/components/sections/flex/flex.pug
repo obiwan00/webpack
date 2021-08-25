@@ -1,31 +1,6 @@
 include ../../mixins/post/post
 
-- var posts = [
--   {
--     imgUrl: require('/src/assets/images/flex-section/1.jpeg'),
--     title: 'Lorem ipsum dolor sit amet',
--     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatum molestiae totam ofassumenda voluptatem, vel beatae incidunt ...',
--     link: {url: '/', title: 'Learn more'},
--   },
--   {
--     imgUrl: require('/src/assets/images/flex-section/2.jpeg'),
--     title: 'Lorem ipsum dolor',
--     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque volussumenda voluptatem, vel beatae incidunt ...',
--     link: {url: '/', title: 'Learn more'}
--   },
--   {
--     imgUrl: require('/src/assets/images/flex-section/3.jpeg'),
--     title: 'Lorem ipsum dolor sit amet consectetur',
--     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatum molestiae totam officiis deserunt repudiandae assumenda volup ...',
--     link: {url: '/', title: 'Learn more'},
--   },
--   {
--     imgUrl: require('/src/assets/images/flex-section/4.jpeg'),
--     title: 'Lorem ipsum dolor sit amet adipisicing elit',
--     description: 'Lorem ipsum adipisicing elit. Itaque voluptatum molestiae totam officiis deserunt repudiandae assumenda voluptatem, vel beatae incidunt ...',
--     link: {url: '/', title: 'Learn more'},
--   }
-- ]
+- var posts = require('/src/static-data/flex.json')
 
 section.flex-section
   .container.flex-section__container
@@ -35,5 +10,6 @@ section.flex-section
         imgUrl: item.imgUrl,
         title: item.title,
         description: item.description,
-        link: {url: item.link.url, title: item.link.title}
+        link: {url: item.link.url, title: item.link.title},
+        creationDate: item.creationDate,
       })

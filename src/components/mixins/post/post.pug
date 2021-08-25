@@ -1,7 +1,7 @@
-mixin post({parentClass = '', imgUrl, title, description, link})
-  article(class=`post ${parentClass}`)
+mixin post({parentClass = '', imgUrl, title, description, link, creationDate})
+  article(class=`post ${parentClass}` data-creation-date=creationDate)
     .post__img
-      img(src=imgUrl, alt="img")
+      img(src=require(`/src/assets/images/${imgUrl}`), alt="img")
     .post__text 
       h4 #{title}
       p #{description}

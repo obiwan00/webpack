@@ -1,21 +1,26 @@
 const fs = require('fs')
-const path = require('path');
+const path = require('path')
 const {
   getFileNamesFromDirWithExtension,
   generateHtmlWebpackPlugins,
 } = require('./utils')
 
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ESLintPlugin = require('eslint-webpack-plugin');
-const PrettierPlugin = require('prettier-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
+const PrettierPlugin = require('prettier-webpack-plugin')
 
 const rootDirPath = path.resolve(__dirname, '..')
 
 const viewPagesPath = path.resolve(rootDirPath, './src/views')
-const viewPages = getFileNamesFromDirWithExtension({sourceDirPath: viewPagesPath, extensions: ['pug', 'html']})
-const viewPagesWrappedWithHtmlPlugins = generateHtmlWebpackPlugins({pages: viewPages, sourceDirPath: viewPagesPath})
-
+const viewPages = getFileNamesFromDirWithExtension({
+  sourceDirPath: viewPagesPath,
+  extensions: ['pug', 'html'],
+})
+const viewPagesWrappedWithHtmlPlugins = generateHtmlWebpackPlugins({
+  pages: viewPages,
+  sourceDirPath: viewPagesPath,
+})
 
 module.exports = {
   entry: {
@@ -32,7 +37,7 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        use: ['pug-loader']
+        use: ['pug-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -42,9 +47,9 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-    ]
+    ],
   },
   output: {
     path: path.resolve(rootDirPath, 'dist'),
   },
-};
+}
