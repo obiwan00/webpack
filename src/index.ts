@@ -1,7 +1,7 @@
 import './styles/index.scss'
 
 import {initHeader} from './components'
-import {initHome} from './js/pages'
+import {initHomePage, initGridPage, initFlexPage} from './js/pages'
 
 document.addEventListener('DOMContentLoaded', runAfterDomLoad)
 
@@ -12,6 +12,10 @@ function runAfterDomLoad(): void {
     window.location.pathname === '/index.html' ||
     window.location.pathname === '/'
   ) {
-    initHome()
+    initHomePage()
+  } else if (window.location.pathname === '/grid.html') {
+    initGridPage()
+  } else if (window.location.pathname === '/flex.html') {
+    initFlexPage()
   }
 }

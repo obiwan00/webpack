@@ -1,4 +1,4 @@
-import {limitString} from '../../../utils/utils'
+import {limitString} from '../../../utils'
 
 interface Card {
   imgUrl: string
