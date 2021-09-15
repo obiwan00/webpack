@@ -28,6 +28,16 @@
     p {
       margin-bottom: 20px;
     }
+    time {
+      align-self: flex-start;
+      margin-bottom: 20px;
+
+      background: $white;
+      padding: 4px 2px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 2px solid black;
+    }
     .btn {
       margin-top: auto;
     }

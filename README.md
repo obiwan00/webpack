@@ -4,7 +4,7 @@ Webpack is a module bundler. Its main purpose is to bundle JavaScript files for 
 
 ## Build Setup:
 
-``` bash
+```bash
 # 1. Install dependencies:
 npm install
 
@@ -19,6 +19,7 @@ npm run dev # dev server runs on http://localhost:9000/
 # production
 npm run build
 ```
+
 The output is located in `dist` folder.
 
 ## Good luck, have fun 😄

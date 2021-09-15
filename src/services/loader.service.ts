@@ -1,20 +1,23 @@
 export class LoaderService {
-  constructor() {
+  private static _instance: LoaderService
+  private loader: HTMLElement
+  private loaderActiveClass = 'loader--active'
+
+  public constructor() {
     if (!LoaderService._instance) {
       LoaderService._instance = this
     }
 
     this.loader = document.getElementById('loader')
-    this.loaderActiveClass = 'loader--active'
 
     return LoaderService._instance
   }
 
-  switchOff() {
+  public switchOff(): void {
     this.loader.classList.remove(this.loaderActiveClass)
   }
 
-  switchOn() {
+  public switchOn(): void {
     this.loader.classList.add(this.loaderActiveClass)
   }
 }

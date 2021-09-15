@@ -1,8 +1,20 @@
-mixin post({parentClass = '', imgUrl, title, description, link})
-  article(class=`post ${parentClass}`)
+-function formatDate(dateString){
+-   var date = new Date(dateString);
+-   var d = date.getDate();
+-   var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+-   var m = monthNames[date.getMonth()];
+-   var y = date.getFullYear();
+-   var hh = date.getHours()
+-   var mm = date.getMinutes()
+-   return d + ' ' + m + ' ' + y + ' '+ hh + ':' + mm;
+-}
+
+mixin post({parentClass = '', imgUrl, title, description, link, creationDate})
+  article(class=`post ${parentClass}` data-creation-date=creationDate)
     .post__img
-      img(src=imgUrl, alt="img")
+      img(src=require(`/src/assets/images/${imgUrl}`), alt="img")
     .post__text 
       h4 #{title}
       p #{description}
+      time(time=creationDate) #{formatDate(creationDate)} 
       a(href=link.url class='btn') #{link.title} 

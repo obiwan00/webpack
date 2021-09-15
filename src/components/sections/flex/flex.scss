@@ -16,6 +16,8 @@
     $gap-y: 28px;
     $col-count: 2;
 
+    position: relative;
+
     @media (max-width: $tabletSmall) {
       &:not(:last-child) {
         margin-top: 20px;

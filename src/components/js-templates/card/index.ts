@@ -1,17 +1,18 @@
-import {limitString} from '../../../utils/utils'
+import {limitString} from '../../../utils'
 
-/**
- * Create card html
- * @param {object} params
- * @param {string} params.url
- * @param {string} params.title
- * @param {object} params.link
- * @param {string} params.link.title
- * @param {string} params.link.url
- * @param {boolean} params.link.newTab
- * @return {HTMLElement}
- */
-export function createCard({imgUrl, title, description, link}) {
+interface Card {
+  imgUrl: string
+  title: string
+  description: string
+  link: {url: string; title: string; newTab: boolean}
+}
+
+export function createCard({
+  imgUrl,
+  title,
+  description,
+  link,
+}: Card): HTMLElement {
   const card = document.createElement('div')
   card.classList.add('card')
   card.innerHTML = `

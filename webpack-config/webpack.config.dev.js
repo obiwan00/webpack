@@ -1,8 +1,8 @@
-const path = require('path');
-const {merge} = require('webpack-merge');
-const common = require('./webpack.config.common.js');
+const path = require('path')
+const {merge} = require('webpack-merge')
+const common = require('./webpack.config.common.js')
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -18,15 +18,15 @@ module.exports = merge(common, {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
@@ -36,9 +36,9 @@ module.exports = merge(common, {
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: true,
             },
@@ -47,4 +47,4 @@ module.exports = merge(common, {
       },
     ],
   },
-});
+})

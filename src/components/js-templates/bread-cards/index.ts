@@ -2,7 +2,7 @@ import {FetchPetService} from '../../../services/fetch-pet.service'
 import {createCard} from '../card'
 import {getItemsGrid} from '../items-grid'
 
-export async function initBreadsFetch() {
+export async function initBreadsFetch(): Promise<void> {
   const appContentEl = document.getElementById('app-content')
   const fetchPetService = new FetchPetService()
 

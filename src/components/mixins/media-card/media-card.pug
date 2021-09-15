@@ -1,7 +1,7 @@
-mixin media-card({parentClass = '', imgUrl, title, description, time})
-  article(class=`media-card ${parentClass}`)
+mixin media-card({parentClass = '', imgUrl, title, description, time, creationDate})
+  article(class=`media-card ${parentClass}` data-creation-date=creationDate)
     .media-card__img 
-      img(src=imgUrl, alt="img")
+      img(src=require(`/src/assets/images/${imgUrl}`), alt="img")
     .media-card__text 
       h2 #{title}
       p #{description}

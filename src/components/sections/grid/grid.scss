@@ -17,6 +17,29 @@
 
     position: relative;
 
+    &:before {
+      content: attr(data-creation-date);
+      position: absolute;
+      left: 8px;
+      bottom: 8px;
+      z-index: 10;
+      opacity: 0.6;
+
+      padding: 4px 2px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      background: $white;
+
+      transition: opacity 250ms ease-in;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        transition: opacity 250ms ease-in;
+      }
+    }
+
     img {
       width: 100%;
     }

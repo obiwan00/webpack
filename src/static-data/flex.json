@@ -1,0 +1,42 @@
+[
+  {
+    "imgUrl": "flex-section/1.jpeg",
+    "title": "Lorem ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatum molestiae totam ofassumenda voluptatem, vel beatae incidunt ...",
+    "link": {
+      "url": "/",
+      "title": "Learn more"
+    },
+    "creationDate": "2021-08-23T18:40:34.140Z"
+  },
+  {
+    "imgUrl": "flex-section/2.jpeg",
+    "title": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque volussumenda voluptatem, vel beatae incidunt ...",
+    "link": {
+      "url": "/",
+      "title": "Learn more"
+    },
+    "creationDate": "2021-08-25T18:41:10.009Z"
+  },
+  {
+    "imgUrl": "flex-section/3.jpeg",
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatum molestiae totam officiis deserunt repudiandae assumenda volup ...",
+    "link": {
+      "url": "/",
+      "title": "Learn more"
+    },
+    "creationDate": "2021-08-26T18:41:18.854Z"
+  },
+  {
+    "imgUrl": "flex-section/4.jpeg",
+    "title": "Lorem ipsum dolor sit amet adipisicing elit",
+    "description": "Lorem ipsum adipisicing elit. Itaque voluptatum molestiae totam officiis deserunt repudiandae assumenda voluptatem, vel beatae incidunt ...",
+    "link": {
+      "url": "/",
+      "title": "Learn more"
+    },
+    "creationDate": "2022-05-15T18:41:28.392Z"
+  }
+]

@@ -1,12 +1,9 @@
-/**
- * Create card html
- * @param {object} params
- * @param {string} params.title
- * @param {string} params.bodyContent
- * @return {HTMLElement}
- */
+interface GridItem {
+  title: string
+  bodyContent: string
+}
 
-export function getItemsGrid({title, bodyContent}) {
+export function getItemsGrid({title, bodyContent}: GridItem): HTMLElement {
   const itemsGrid = document.createElement('section')
   itemsGrid.classList.add('items-grid')
   itemsGrid.innerHTML = `
